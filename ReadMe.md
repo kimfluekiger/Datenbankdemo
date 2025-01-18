@@ -6,31 +6,12 @@ Diese Anleitung beschreibt, wie du MySQL mit Docker Compose einrichtest und grun
 
 - Docker und Docker Compose müssen auf deinem System installiert sein. Du kannst Docker von der offiziellen Docker-Website herunterladen und installieren.
 
-## Docker Compose Datei
-
-Erstelle eine Datei namens `docker-compose.yml` mit folgendem Inhalt:
-
-```yaml
-services:
-  mysql:
-    image: mysql:latest
-    container_name: mysql-container
-    environment:
-      MYSQL_ROOT_PASSWORD: my-secret-pw
-      MYSQL_DATABASE: demo_db
-      MYSQL_USER: demo_user
-      MYSQL_PASSWORD: demo_password
-    ports:
-      - "3307:3306"  # Ändere den Host-Port auf 3307
-    volumes:
-      - mysql-data:/var/lib/mysql
-
-volumes:
-  mysql-data:
-```
-
 ## Verbindung zur MySQL-Datenbank herstellen
 
+### Docker-Container starten
+```bash
+docker-compose up -d  
+```
 ### Docker-Container überprüfen
 
 Überprüfe, ob der MySQL-Container läuft:
