@@ -45,7 +45,7 @@ CREATE TABLE users (
 ```
 ## Daten einfügen (Create)
 ```bash
-INSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com');
+INSERT INTO users (username, email) VALUES ('kim_fluekiger', 'kim@kimfluekiger.ch');
 ```
 
 ## Daten lesen (Read)
@@ -54,10 +54,10 @@ SELECT * FROM users;
 ```
 ## Daten aktualisieren (Update)
 ```bash
-UPDATE users SET email = 'john.doe@example.com' WHERE username = 'john_doe';
+UPDATE users SET email = 'info@kimfluekiger.ch' WHERE username = 'kim_fluekiger';
 ```
 ## Daten löschen (Delete)
 ```bash
-DELETE FROM users WHERE username = 'john_doe';
+DELETE FROM users WHERE username = 'kim_fluekiger';
 
 ```
